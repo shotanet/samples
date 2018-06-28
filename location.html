@@ -12,3 +12,17 @@ console.log(url.pathname);  // /en-US/search
 console.log(url.search);    // ?q=URL
 console.log(url.hash);      // #search-results-close-container
 console.log(url.origin);    // https://developer.mozilla.org
+
+
+
+https://php-fan.org/getdir-js.html
+<script>
+'use strict';
+	var local = window.location;
+	var url = local.origin;
+url + getDir(local); // 現在のディレクトリ
+url + getDir(local,1); // 1つ上のディレクトリ
+function getDir(place, n) {
+　　return place.pathname.replace(new RegExp("(?:\\\/+[^\\\/]*){0," + ((n || 0) + 1) + "}$"), "/");
+}
+</script>
